@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{% block body %}
+        <div class="container">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Item Sold</th>
+                    <th scope="col">Quantity Sold</th>
+                    <th scope="col">Created</th>
+                  </tr>
+                </thead>
+                <br>
+                {%for d in my%}
+                <tbody>
+                  <tr>
+                      
+                    <th scope="row"><a href="/data/{{d.id}}/{{d.userid}}">{{d.amt}}</a></th>
+                    <th>{{d.item}}</th>
+                    <th>{{d.quantity}}</th>
+                    <th>{{d.created}}</th>
+                  </tr>
+                </tbody>
+                {%endfor%}
+              </table>
+            
+           
+            
+
+        </div>
+{% endblock %}
+
